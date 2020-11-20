@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Master\VendorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/Master/Vendor', [VendorController::class, 'app'])->name('Master/Vendor');
+Route::resource('/Master/Vendor', VendorController::class);
