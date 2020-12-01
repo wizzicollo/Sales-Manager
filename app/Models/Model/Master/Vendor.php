@@ -1,4 +1,4 @@
-  <?php
+<?php
 
 namespace App\Models\Model\Master;
 
@@ -9,10 +9,11 @@ class Vendor extends Model
 {
     protected $table = 'vendors';
 
-    public function user_modify() {
+    public function user() {
 
-       return $this->belongTo( related '\App\User', foreignKey 'user_modified');
-       
+      // return $this->belongsTo('App\Models\User', 'foreign_key' 'user_modified');
+      return $this->belongsTo('App\Models\User', 'foreign_key', 'owner_key');
+
     }
     // use HasFactory;
 }

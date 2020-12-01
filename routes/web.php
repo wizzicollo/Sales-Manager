@@ -26,3 +26,4 @@ Auth::routes();
 
 Route::get('/Master/Vendor', [VendorController::class, 'app'])->name('Master/Vendor');
 Route::resource('/Master/Vendor', VendorController::class);
+Route::get('Vendor/datatable', 'Master\VendorController@datatables')->name('vendor/datatable');

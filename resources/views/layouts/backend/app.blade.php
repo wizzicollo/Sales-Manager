@@ -27,7 +27,7 @@
   <!-- summernote -->
   {{-- <link rel="stylesheet" href="{{ assets('assets/plugins/summernote/summernote-bs4.css') }}"> --}}
 
-  
+
 {{-- <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script> --}}
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
@@ -52,6 +52,8 @@
 
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+   @stack('css')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -73,9 +75,9 @@
 <!-- jQuery UI 1.11.4 -->
 {{-- <script src="{{ assets ('assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script> --}}
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-{{-- <script>
+<script>
   $.widget.bridge('uibutton', $.ui.button)
-</script> --}}
+</script>
 <!-- Bootstrap 4 -->
 {{-- <script src="{{ assets ('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script> --}}
 <!-- ChartJS -->
@@ -83,8 +85,8 @@
 <!-- Sparkline -->
 {{-- <script src="{{ assets ('assets/plugins/sparklines/sparkline.js') }}"></script> --}}
 <!-- JQVMap -->
-{{-- <script src="{{ assets ('assets/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
-<script src="{{ assets ('assest/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script> --}}
+{{-- <script src="{{ assets ('assets/plugins/jqvmap/jquery.vmap.min.js') }}"></script> --}}
+{{-- <script src="{{ assets ('assest/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script> --}}
 <!-- jQuery Knob Chart -->
 {{-- <script src="{{ assets ('assets/plugins/jquery-knob/jquery.knob.min.js') }}"></script> --}}
 <!-- daterangepicker -->
@@ -142,5 +144,7 @@
 <script src="assets/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="assets/dist/js/demo.js"></script>
+
+@stack('js')
 </body>
 </html>

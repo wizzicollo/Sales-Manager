@@ -37,48 +37,51 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="POST" action="{{ route('Vendor.store') }}">
                     @csrf
                   <div class="card-body">
                     <div class="form-group row">
                         <div class="col-md-4">
-                      <label for="name" class="col-sm-4 col-form-label">Name</label>
-                      <div class="col-sm-8">
+                      <label for="name" class="col-sm-6 col-form-label">Name</label>
+                      <div class="col-sm-6">
                         <input type="text" class="form-control" id="name" name="name"  placeholder="Name">
                       </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="Address" class="col-sm-4 col-form-label">Address</label>
-                        <div class="col-sm-8">
+                        <label for="Address" class="col-sm-6 col-form-label">Address</label>
+                        <div class="col-sm-6">
                           <input type="text" class="form-control" id="address" name="address" placeholder="Address">
                         </div>
                       </div>
-                    <div class="form-group row">
-                      <label for="inputPassword3" class="col-sm-4 col-form-label">Password</label>
-                      <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                      </div>
-                    </div>
-                </div>
                 <div class="col-md-4">
-                    <label for="contactPerson" class="col-sm-4 col-form-label">Contact Person</label>
-                    <div class="col-sm-8">
+                    <label for="contactPerson" class="col-sm-6 col-form-label">Contact Person</label>
+                    <div class="col-sm-6">
                       <input type="text" class="form-control" id="contactPerson" name="contactPerson" placeholder="Contact Person">
                     </div>
                   </div>
-                    <div class="form-group row">
-                      <div class="offset-sm-2 col-sm-10">
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                          <label class="form-check-label" for="exampleCheck2">Remember me</label>
-                        </div>
-                      </div>
+
+                  {{-- <div class="form-group row"> --}}
+                    <div class="col-md-4">
+                  <label for="phone" class="col-sm-6 col-form-label">Phone No</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="phone" name="phone"  placeholder="Phone No">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="Status" class="col-sm-6 col-form-label">Status</label>
+                    <div class="col-sm-6">
+                      <select class="form-control" id="status" name="status">
+                      <option value="1">Active</option>
+                      <option value="0">Inactive</option>
+                      </select>
                     </div>
+                  </div>
+
+
                   </div>
                   <!-- /.card-body -->
                   <div class="card-footer">
-                    <button type="submit" class="btn btn-info">Sign in</button>
-                    <button type="submit" class="btn btn-default float-right">Cancel</button>
+                    <button type="submit" class="btn btn-default float-right">Submit</button>
                   </div>
                   <!-- /.card-footer -->
                 </form>
